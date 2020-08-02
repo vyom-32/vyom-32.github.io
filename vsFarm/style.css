@@ -1,0 +1,75 @@
+body {
+    background-image: url('images/3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.main{
+    align-self: center;
+    max-width: 600px;
+    height: max-content;
+    background-color: rgba(15, 15, 15, 0.548);
+}
+.page{
+    align-self: center;
+    max-width: 600px;
+    height: max-content;
+    background-color: rgba(15, 15, 15, 0.548);
+}
+h1{
+    color: rgb(233, 234, 241);
+    font-size:70px;
+    font-weight: 900;
+    font-family:cursive;
+}
+h2{
+    color: rgb(233, 234, 241);
+    font-size:40px;
+    font-weight: 900;
+    font-family:cursive;
+}
+h3{
+    color: rgb(233, 234, 241);
+    font-weight: 900;
+    font-family:cursive;
+}
+.main_form{
+    font-size: x-large;
+    font-family: cursive;
+    font-weight: bold;
+    color:rgb(249, 250, 246);
+    background-color: rgba(7, 7, 7, 0.692);
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.76);
+}
+.link_table{
+    padding-top: 20px;
+}
+a{
+    font-family: cursive;
+    color: #f0e9e9;
+}
+
+.header {
+    padding: 2px;
+    background: #f50404;
+}
+
+.navbar{
+    overflow: hidden;
+  background-color: rgb(7, 7, 7);
+}
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+.navbar a.right {
+    float: right;
+}  
+
+.profile_pic{
+    height:400px;
+    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.76);
+}
