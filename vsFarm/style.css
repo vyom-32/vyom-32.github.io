@@ -2,12 +2,56 @@ body {
     background-image: url('images/3.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+
+table{
+    color: rgb(233, 234, 241);
+}
+
+.invalid{
+    color: red;
+}
+
+.valid{
+    color:green;
+}
+
+input[type=submit] {
+    font-weight: bold;
+    display: inline-block;
+    line-height: 35px;
+    padding: 0 33px;
+    border-radius: 20px;
+    background-color: #0cf132;
+    color: rgb(10, 10, 10);
+}
+
+input[type=button] {
+    font-weight: bold;
+    display: inline-block;
+    line-height: 35px;
+    padding: 0 33px;
+    border-radius: 20px;
+    background-color: #0cf132;
+    color: rgb(10, 10, 10);
+}
+
+input[type=reset] {
+    font-weight: bold;
+    display: inline-block;
+    line-height: 35px;
+    padding: 0 33px;
+    border-radius: 20px;
+    background-color: #0cf132;
+    color: rgb(10, 10, 10);
+}
+
 .main{
     align-self: center;
     max-width: 600px;
     height: max-content;
-    background-color: rgba(15, 15, 15, 0.548);
+    background-color: rgba(1, 0, 5, 0.692);
 }
 .page{
     align-self: center;
@@ -19,32 +63,29 @@ h1{
     color: rgb(233, 234, 241);
     font-size:70px;
     font-weight: 900;
-    font-family:cursive;
+    
 }
 h2{
     color: rgb(233, 234, 241);
     font-size:40px;
     font-weight: 900;
-    font-family:cursive;
 }
 h3{
     color: rgb(233, 234, 241);
     font-weight: 900;
-    font-family:cursive;
 }
 .main_form{
-    font-size: x-large;
-    font-family: cursive;
+    font-size: large;
     font-weight: bold;
     color:rgb(249, 250, 246);
-    background-color: rgba(7, 7, 7, 0.692);
-    box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.76);
+    background-color: rgb(0, 0, 0);
+    padding: 15px;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.781);
 }
 .link_table{
     padding-top: 20px;
 }
 a{
-    font-family: cursive;
     color: #f0e9e9;
 }
 
@@ -73,3 +114,34 @@ a{
     height:400px;
     box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.76);
 }
+
+#pass_verify {
+    display:none;
+    color: #f0e9e9;
+    position: relative;
+    margin-top: 10px;
+  }
+  
+  #pass_verify p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+  }
