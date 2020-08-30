@@ -10,10 +10,17 @@
 
 <body>
     <div class="header"></div>
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="your_orders.html">Your Orders</a>
+        <a href="new_order.html">New Order</a>
+        <a class="right" href="index.html">Logout</a>
+    </div>
     <br />
-    <div class="main_form">
+    <div class="page">
         <center>
-            <h2> Verify your order! </h2>
+            <h5> Verify your order! </h5>
         </center>
         <form action="place_order.html">
             <center>
@@ -26,7 +33,7 @@
                             <input type="number" value="2" name="Cabbage_kg" min="0"> kg <input type="number"
                                 value="500" name="Cabbage_gm" min="0"> gm
                         </td>
-                        <td>
+                        <td align="center">
                             150Rs
                         </td>
                     </tr>
@@ -38,7 +45,7 @@
                             <input type="number" value="2" name="potato_kg" min="0"> kg <input type="number" value="0"
                                 name="potato_gm" min="0"> gm
                         </td>
-                        <td>
+                        <td align="center">
                             60Rs
                         </td>
                     </tr>
@@ -50,7 +57,7 @@
                             <input type="number" value="0" name="cauliflower_kg" min="0"> kg <input type="number"
                                 value="500" name="cauliflower_gm" min="0"> gm
                         </td>
-                        <td>
+                        <td align="center">
                             15Rs
                         </td>
                     </tr>
@@ -62,24 +69,25 @@
                             <input type="number" value="1" name="onion_kg" min="0"> kg <input type="number" value="500"
                                 name="onion_gm" min="0"> gm
                         </td>
-                        <td>
+                        <td align="center">
                             150Rs
                         </td>
                     </tr>
-                    <tr>
-                        <td align="center" colspan="2">
+                    <tr style="color: aqua; font-size: large; font-weight: bold;">
+                        <td align="right" colspan="2">
                             Total
                         </td>
-                        <td>
+                        <td align="center">
                             375Rs
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="submit" value="Place order">
+                            <input type="reset">
+                            
                         </td>
                         <td>
-                            <input type="reset">
+                            <input type="submit" value="Place order">
                         </td>
                         <td>
                             <a href="new_order.html"><input type="button" value="Discard"></a>
