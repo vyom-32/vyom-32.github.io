@@ -11,6 +11,11 @@
     <link rel="stylesheet" href="assets/css/owl.css">
     <link rel="stylesheet" href="assets/css/custom.css">
     <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="myscripts.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>
         Confirm Order
     </title>
@@ -30,7 +35,7 @@
         <center>
             <h5> Verify your order! </h5>
         </center>
-        <form action="place_order.html">
+        <form action="place_order.html" id="place_f">
             <center>
                 <table>
                     <tr>
@@ -92,10 +97,17 @@
                     <tr>
                         <td>
                             <input type="reset">
-                            
                         </td>
                         <td>
-                            <input type="submit" value="Place order">
+                            <input type="submit" value="Place order" id="place" >
+                            <script>
+                                $(document).ready(function () {
+                                    $("#place_f").submit(function (event) {
+                                        alert("Your order will be placed")
+                                    });
+                        
+                                })
+                            </script>
                         </td>
                         <td>
                             <a href="new_order.html"><input type="button" value="Discard"></a>
@@ -104,6 +116,7 @@
                 </table>
             </center>
         </form>
+        
     </div>
     </br></br></br></br></br></br></br></br>    
     <footer class="page-footer font-small black pt-4" style="background-color: black;">
