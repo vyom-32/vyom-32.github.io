@@ -104,11 +104,11 @@ nav {
   height: 100vh;
   padding: 1em;
   opacity: 80%;
-  -webkit-animation: menuenimation 100ms;
-          animation: menuenimation 100ms;
+  -webkit-animation: menuanimation 100ms;
+          animation: menuanimation 100ms;
 }
 
-@-webkit-keyframes menuenimation {
+@-webkit-keyframes menuanimation {
   from {
     right: -2em;
   }
@@ -117,7 +117,7 @@ nav {
   }
 }
 
-@keyframes menuenimation {
+@keyframes menuanimation {
   from {
     right: -2em;
   }
@@ -267,7 +267,58 @@ nav li a:hover {
   background: var(--primary-color);
   text-decoration: none;
   text-align: center;
-  padding: .5em;
+  padding: 0.5em;
   border-radius: 1em;
+}
+
+.construction-sec {
+  display: block;
+}
+
+.construction-sec .const-div {
+  text-align: center;
+  padding: 2em;
+  -webkit-animation: constanimation 4s infinite;
+          animation: constanimation 4s infinite;
+}
+
+.construction-sec .const-div h1 {
+  color: white;
+}
+
+@-webkit-keyframes constanimation {
+  0% {
+    background-color: rgba(255, 0, 0, 0.521);
+  }
+  25% {
+    background-color: rgba(255, 0, 200, 0.438);
+  }
+  50% {
+    background-color: rgba(0, 0, 255, 0.466);
+  }
+  75% {
+    background-color: rgba(0, 128, 0, 0.466);
+  }
+  100% {
+    background-color: rgba(255, 0, 0, 0.473);
+  }
+}
+
+@keyframes constanimation {
+  0% {
+    background-color: rgba(255, 0, 0, 0.521);
+  }
+  25% {
+    background-color: rgba(255, 0, 200, 0.438);
+  }
+  50% {
+    background-color: rgba(0, 0, 255, 0.466);
+  }
+  75% {
+    background-color: rgba(0, 128, 0, 0.466);
+  }
+  100% {
+    background-color: rgba(255, 0, 0, 0.473);
+  }
 }
 /*# sourceMappingURL=main.css.map */
