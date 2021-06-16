@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+:root {
+  --primary-color: #007cf8;
+}
+
+body {
+  background: black;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.navbar {
+  background: black;
+  padding: 1em;
+
+  .logo {
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 1.2em;
+
+    span {
+      color: var(--primary-color);
+    }
+  }
+
+  nav {
+    display: none;
+  }
+
+  .container {
+    display: flex;
+    place-content: space-between;
+  }
+
+  .mobile-menu {
+    cursor: pointer;
+    position: fixed;
+    right: 1em;
+  }
+}
+
+a {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.section-1 {
+  text-align: center;
+}
+
+.right-side {
+  .subhead {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: whitesmoke;
+    letter-spacing: 0.3em;
+    font-size: small;
+    margin-bottom: 0.2em;
+  }
+
+  h1 {
+    color: white;
+    font-size: 2.5em;
+    line-height: 1.3em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+
+  h2 {
+    color: var(--primary-color);
+    font-size: 2.5em;
+    line-height: 1.3em;
+    margin-top: 0em;
+    margin-bottom: 0.2em;
+  }
+}
+
+.profile-pic {
+  width: 70%;
+  margin-top: 3em;
+  border-radius: 100%;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  //width: 66%;
+  right: 0;
+  top: 0;
+  background: black;
+  height: 100vh;
+  padding: 1em;
+  opacity: 80%;
+  animation: menuenimation 100ms;
+
+  @keyframes menuenimation {
+    from {
+      right: -2em;
+    }
+    to {
+      right: 0;
+    }
+  }
+
+  ul.primary-nav {
+    margin-top: 5em;
+  }
+
+  li {
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      padding: 0.5em;
+      font-size: 1.3em;
+      text-align: right;
+
+      &:hover {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.objective-sec {
+  padding-left: 0;
+  .objective-div {
+    transform: skewY(-2.5deg);
+    transform-origin: 100%;
+    display: block;
+    background: rgba(4, 65, 134, 0.562);
+    padding: 1em;
+    margin-left: 0;
+    max-width: 600px;
+
+    .objective-para {
+      display: block;
+      border: 3px solid rgba(4, 65, 134, 0.562);
+      border-radius: 1em;
+      background-color: rgb(5, 5, 5);
+      padding: 1em;
+      color: white;
+      transform: skewY(2.5deg);
+      transform-origin: 100%;
+      margin-top: -2em;
+    }
+  }
+}
+
+.ed-sec { 
+  //padding-left: 0;
+  //align-items: center;
+  margin:0;
+  padding: auto;
+  display: block;
+  //border: 5px white;
+  background: yello;
+  .ed-dev {
+    transform: skewY(-2.5deg);
+    transform-origin: 100%;
+    display: block;
+    background: rgba(4, 65, 134, 0.562);
+    padding: 1em;
+    //margin-right: 1em;
+    max-width: 690px;
+    
+
+    .ed-table {
+      color: white;
+      text-align: center;
+      transform: skewY(2.5deg);
+      display: block;
+      border-radius: 1em;
+      background: black;
+      margin-top: -3em;
+      border: 3px solid rgba(4, 65, 134, 0.562);
+      margin-bottom: 2em;
+      overflow: auto;
+      right: 0;
+      max-width: 679px;
+    }
+
+    scrollbar-width: 0;
+    tr:hover {
+      background-color: rgba(4, 65, 134, 0.562);
+    }
+
+    th,
+    td {
+      padding: 1em;
+    }
+  }
+}
+
+.project-sec{
+  //color: white;
+  .project-div{
+    display: block;
+    align-items: center;
+    padding: 1em;
+    border: 3px solid rgba(4, 65, 134, 0.562);
+    border-radius: 10%;
+    text-align: center;
+    margin: 1em;
+
+    h1 {
+      font-size: 1.5em;
+      line-height: 1.3em;
+      margin-top: 0em;
+      margin-bottom: 0.2em;
+
+      a{
+        text-decoration: none;
+        color: var(--primary-color);
+      }
+    }
+
+    span{
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    p{
+      color: white;
+    }
+
+    .discreption{
+      color: whitesmoke;
+      font-size: small;
+    }
+
+    .open-btn{
+      display: block;
+      background: var(--primary-color);
+      text-decoration: none;
+      text-align: center;
+      padding: .5em;
+      border-radius: 1em;
+    }
+  }
+}

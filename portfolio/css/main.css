@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+:root {
+  --primary-color: #007cf8;
+}
+
+body {
+  background: black;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+.navbar {
+  background: black;
+  padding: 1em;
+}
+
+.navbar .logo {
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  font-size: 1.2em;
+}
+
+.navbar .logo span {
+  color: var(--primary-color);
+}
+
+.navbar nav {
+  display: none;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  place-content: space-between;
+}
+
+.navbar .mobile-menu {
+  cursor: pointer;
+  position: fixed;
+  right: 1em;
+}
+
+a {
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  padding: 5em 2em;
+}
+
+.section-1 {
+  text-align: center;
+}
+
+.right-side .subhead {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: whitesmoke;
+  letter-spacing: 0.3em;
+  font-size: small;
+  margin-bottom: 0.2em;
+}
+
+.right-side h1 {
+  color: white;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: 0.2em;
+  margin-bottom: 0.2em;
+}
+
+.right-side h2 {
+  color: var(--primary-color);
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin-top: 0em;
+  margin-bottom: 0.2em;
+}
+
+.profile-pic {
+  width: 70%;
+  margin-top: 3em;
+  border-radius: 100%;
+}
+
+nav.menu-btn {
+  display: block;
+}
+
+nav {
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 0;
+  background: black;
+  height: 100vh;
+  padding: 1em;
+  opacity: 80%;
+  -webkit-animation: menuenimation 100ms;
+          animation: menuenimation 100ms;
+}
+
+@-webkit-keyframes menuenimation {
+  from {
+    right: -2em;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes menuenimation {
+  from {
+    right: -2em;
+  }
+  to {
+    right: 0;
+  }
+}
+
+nav ul.primary-nav {
+  margin-top: 5em;
+}
+
+nav li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 0.5em;
+  font-size: 1.3em;
+  text-align: right;
+}
+
+nav li a:hover {
+  font-weight: bold;
+}
+
+.mobile-menu-exit {
+  float: right;
+  margin: 0.5em;
+  cursor: pointer;
+}
+
+.objective-sec {
+  padding-left: 0;
+}
+
+.objective-sec .objective-div {
+  -webkit-transform: skewY(-2.5deg);
+          transform: skewY(-2.5deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  display: block;
+  background: rgba(4, 65, 134, 0.562);
+  padding: 1em;
+  margin-left: 0;
+  max-width: 600px;
+}
+
+.objective-sec .objective-div .objective-para {
+  display: block;
+  border: 3px solid rgba(4, 65, 134, 0.562);
+  border-radius: 1em;
+  background-color: #050505;
+  padding: 1em;
+  color: white;
+  -webkit-transform: skewY(2.5deg);
+          transform: skewY(2.5deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  margin-top: -2em;
+}
+
+.ed-sec {
+  margin: 0;
+  padding: auto;
+  display: block;
+  background: yello;
+}
+
+.ed-sec .ed-dev {
+  -webkit-transform: skewY(-2.5deg);
+          transform: skewY(-2.5deg);
+  -webkit-transform-origin: 100%;
+          transform-origin: 100%;
+  display: block;
+  background: rgba(4, 65, 134, 0.562);
+  padding: 1em;
+  max-width: 690px;
+  scrollbar-width: 0;
+}
+
+.ed-sec .ed-dev .ed-table {
+  color: white;
+  text-align: center;
+  -webkit-transform: skewY(2.5deg);
+          transform: skewY(2.5deg);
+  display: block;
+  border-radius: 1em;
+  background: black;
+  margin-top: -3em;
+  border: 3px solid rgba(4, 65, 134, 0.562);
+  margin-bottom: 2em;
+  overflow: auto;
+  right: 0;
+  max-width: 679px;
+}
+
+.ed-sec .ed-dev tr:hover {
+  background-color: rgba(4, 65, 134, 0.562);
+}
+
+.ed-sec .ed-dev th,
+.ed-sec .ed-dev td {
+  padding: 1em;
+}
+
+.project-sec .project-div {
+  display: block;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em;
+  border: 3px solid rgba(4, 65, 134, 0.562);
+  border-radius: 10%;
+  text-align: center;
+  margin: 1em;
+}
+
+.project-sec .project-div h1 {
+  font-size: 1.5em;
+  line-height: 1.3em;
+  margin-top: 0em;
+  margin-bottom: 0.2em;
+}
+
+.project-sec .project-div h1 a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.project-sec .project-div span {
+  color: white;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.project-sec .project-div p {
+  color: white;
+}
+
+.project-sec .project-div .discreption {
+  color: whitesmoke;
+  font-size: small;
+}
+
+.project-sec .project-div .open-btn {
+  display: block;
+  background: var(--primary-color);
+  text-decoration: none;
+  text-align: center;
+  padding: .5em;
+  border-radius: 1em;
+}
+/*# sourceMappingURL=main.css.map */

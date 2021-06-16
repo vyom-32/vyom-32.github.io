@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="container">
+            <a class="logo" href="#">Hello<span>World</span></a>
+            
+            <img id="mobile-menu" class="mobile-menu" src="images/menu.svg" alt="Open menu items">
+            <nav>
+                <img id="exit-mobile-menu" class="mobile-menu-exit" src="images/exit.svg" alt="Exit menu items">
+                <ul class="primary-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Education</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Skills</a></li>
+                </ul>
+                <ul class="secondary-nav">
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <section class="section-1">
+        <div class="container">
+            <div class="left-side">
+                <img class="profile-pic" src="images/image1.jpg" alt="Profile picture">
+            </div>
+            <div class="right-side">
+                <p class="subhead">Hello World!</p>
+                <h1>Vyom</h1>
+                <h2>Sarsavadiya</h2>
+                <p class="subhead">Here</p>
+            </div>
+        </div>
+    </section>
+    <section class="objective-sec">
+        <div class="objective-div">
+            <p class="objective-para">
+                To work in a field which interests me and gives enough scope to utilize my skills for the betterment
+of the organization. Enrichment of skills and gaining experience with my passion and hard work is
+my top priority.
+            </p>
+        </div>
+    </section>
+    <section class="ed-sec">
+        <div class="ed-dev">
+            <table class="ed-table">
+                <tr>
+                    <td>B.Tech<br>(Computer Engineering)</td>
+                    <td>Dharmsinh Desai<br>University, Nadiad</td>
+                    <td>May-2022<br>(Expected)</td>
+                    <td>7.88 CPI<br>(As of sem6)</td>
+                </tr>
+                <tr>
+                    <td>HSC</td>
+                    <td>GHSEB</td>
+                    <td>March-2018</td>
+                    <td>99.36<br>percentile</td>
+                </tr>
+                <tr>
+                    <td>SSC</td>
+                    <td>GSEB</td>
+                    <td>March-2016</td>
+                    <td>99.30<br>percentile</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+    <script>
+        const mobileBtn = document.getElementById('mobile-menu')
+              nav = document.querySelector('nav')
+              mobileBtnExit = document.getElementById('exit-mobile-menu');
+
+        mobileBtn.addEventListener('click', () => {
+            nav.classList.add('menu-btn');
+            mobileBtn.hidden = true
+        })
+
+        mobileBtnExit.addEventListener('click', () => {
+            nav.classList.remove('menu-btn');
+            mobileBtn.hidden = false
+        })
+    </script>
+    <section class="project-sec">
+        <div class="project-div">
+            <h1><a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku">Web Sudoku</a></h1>
+            <ul>
+                <li><p><span>Technologies : </span>ASP.NET Core MVC, Entity Framework</p></li>
+                <li><p class="discreption">Web Sudoku is online portal where user can play sudoku with diffrent difficulty levels available.</p></li>
+            </ul>
+            <a class="open-btn" target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku">Open in Github</a>
+        </div>
+        <div class="project-div">
+            <h1><a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/bidding">Online Bidding</a></h1>
+            <ul>
+                <li><p><span>Technologies : </span>Django Framework</p></li>
+                <li><p class="discreption">Online Biddinng system is an online portal where users can arrange online auctions and interested users can participate in them.</p></li>
+            </ul>
+            <a class="open-btn" target="_blank" href="https://github.com/vyom-32/Projects/tree/master/bidding">Open in Github</a>
+        </div>
+        <div class="project-div">
+            <h1><a target="_blank" href="https://github.com/vyom-32/Electrify/tree/main/SDP_Project">Electrify</a></h1>
+            <ul>
+                <li><p><span>Technologies : </span>NodeJs, Angular, Express, MongoDB</p></li>
+                <li><p class="discreption">Online portal to digitalize electricity billing system And also digitalize new-connection requests</p></li>
+            </ul>
+            <a class="open-btn" target="_blank" href="https://github.com/vyom-32/Electrify/tree/main/SDP_Project">Open in Github</a>
+        </div>
+        <div class="project-div">
+            <h1><a target="_blank" href="https://github.com/vyom-32/BestResource.com">BestResource.com</a></h1>
+            <ul>
+                <li><p><span>Technologies : </span>NodeJs, Angular, Express, MongoDB</p></li>
+                <li><p class="discreption">Online portal where geeks can share links of useful resource </p></li>
+            </ul>
+            <a class="open-btn" target="_blank" href="https://github.com/vyom-32/BestResource.com">Open in Github</a>
+        </div>
+    </section>
+</body>
+</html>
