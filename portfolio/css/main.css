@@ -162,7 +162,7 @@ nav li a:hover {
   background: rgba(4, 65, 134, 0.562);
   padding: 1em;
   margin-left: 0;
-  max-width: 600px;
+  max-width: 690px;
 }
 
 .objective-sec .objective-div .objective-para {
@@ -180,6 +180,7 @@ nav li a:hover {
 }
 
 .ed-sec {
+  padding-left: 0;
   margin: 0;
   padding: auto;
   display: block;
@@ -223,6 +224,13 @@ nav li a:hover {
   padding: 1em;
 }
 
+.project-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: auto;
+}
+
 .project-sec .project-div {
   display: block;
   -webkit-box-align: center;
@@ -233,6 +241,9 @@ nav li a:hover {
   border-radius: 10%;
   text-align: center;
   margin: 1em;
+  max-width: 350px;
+  min-width: 220px;
+  margin-bottom: 1em;
 }
 
 .project-sec .project-div h1 {
@@ -269,6 +280,7 @@ nav li a:hover {
   text-align: center;
   padding: 0.5em;
   border-radius: 1em;
+  margin-bottom: 0;
 }
 
 .construction-sec {
@@ -319,6 +331,110 @@ nav li a:hover {
   }
   100% {
     background-color: rgba(255, 0, 0, 0.473);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  }
+  .navbar .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px auto;
+        grid-template-columns: 180px auto;
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+  .navbar nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+  }
+  .navbar nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navbar nav a {
+    color: white;
+    font-size: 1em;
+    padding: 0.1em 1em;
+    cursor: pointer;
+  }
+  .navbar nav ul.primary-nav {
+    margin: 0;
+  }
+  .navbar nav li.current a {
+    font-weight: bold;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  section {
+    padding: 2em 2em;
+  }
+  .section-1 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .section-1 .container .profile-pic {
+    display: block;
+    width: 30%;
+    margin-left: 2em;
+  }
+  .section-1 .container .right-side {
+    padding: 8em 2em;
+  }
+  .section-1 .container .right-side h1 {
+    font-size: 3em;
+  }
+}
+
+@media only screen and (min-width: 800px) and (min-width: 1080px) {
+  .ed-sec:before {
+    content: '';
+    position: absolute;
+    width: 20%;
+    height: 20em;
+    background: var(--primary-color);
+    right: 0;
+    margin-top: -7em;
+    -webkit-transform: skewY(-2.5deg);
+            transform: skewY(-2.5deg);
+  }
+  .ed-sec:after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 20em;
+    background: url("../images/dots.svg") no-repeat;
+    right: 8em;
+    margin-top: -16em;
+    -webkit-transform: skewY(2.5deg);
+            transform: skewY(2.5deg);
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .ed-sec .ed-dev {
+    color: white;
   }
 }
 /*# sourceMappingURL=main.css.map */

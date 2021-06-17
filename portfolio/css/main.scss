@@ -152,7 +152,7 @@ nav {
     background: rgba(4, 65, 134, 0.562);
     padding: 1em;
     margin-left: 0;
-    max-width: 600px;
+    max-width: 690px;
 
     .objective-para {
       display: block;
@@ -171,6 +171,7 @@ nav {
 .ed-sec {
   //padding-left: 0;
   //align-items: center;
+  padding-left: 0;
   margin: 0;
   padding: auto;
   display: block;
@@ -214,6 +215,8 @@ nav {
 
 .project-sec {
   //color: white;
+  display: flex;
+  overflow-x: auto;
   .project-div {
     display: block;
     align-items: center;
@@ -222,6 +225,10 @@ nav {
     border-radius: 10%;
     text-align: center;
     margin: 1em;
+    max-width: 350px;
+    min-width: 220px;
+    margin-bottom: 1em;
+    //padding-bottom: 1em;
 
     h1 {
       font-size: 1.5em;
@@ -257,6 +264,7 @@ nav {
       text-align: center;
       padding: 0.5em;
       border-radius: 1em;
+      margin-bottom: 0;
     }
   }
 }
@@ -268,7 +276,7 @@ nav {
     padding: 2em;
     animation: constanimation 4s infinite;
 
-    h1{
+    h1 {
       color: rgb(255, 255, 255);
     }
 
@@ -288,6 +296,110 @@ nav {
       100% {
         background-color: rgba(255, 0, 0, 0.473);
       }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .mobile-menu,
+  .mobile-menu-exit {
+    display: none;
+  }
+
+  .navbar .container {
+    display: grid;
+    grid-template-columns: 180px auto;
+    justify-content: unset;
+  }
+
+  .navbar nav {
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    position: unset;
+    height: auto;
+    width: 100%;
+    padding: 0;
+
+    ul {
+      display: flex;
+    }
+
+    a {
+      color: white;
+      font-size: 1em;
+      padding: 0.1em 1em;
+      cursor: pointer;
+    }
+
+    ul.primary-nav {
+      margin: 0;
+    }
+
+    li.current a {
+      font-weight: bold;
+    }
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  section {
+    padding: 2em 2em;
+  }
+
+  .section-1 .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    .profile-pic {
+      display: block;
+      width: 30%;
+      margin-left: 2em;
+    }
+
+    .right-side {
+      padding: 8em 2em;
+      h1 {
+        font-size: 3em;
+        //width: 90%;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1080px) {
+    .ed-sec {
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 20%;
+            height: 20em;
+            //border-radius: 100%;
+            background: var(--primary-color);
+            right: 0;
+            margin-top: -7em;
+            transform: skewY(-2.5deg);
+            //top: -4em;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 20em;
+            background: url('../images/dots.svg') no-repeat;
+            right: 8em;
+            margin-top: -16em;
+            transform: skewY(2.5deg);
+        }
+    }
+}
+
+  .ed-sec{
+
+    .ed-dev{
+      color: white;
     }
   }
 }
