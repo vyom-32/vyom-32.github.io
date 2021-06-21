@@ -6,6 +6,7 @@
 
 body {
   background: black;
+  color: white;
   margin: 0;
   font-family: "Poppins";
 }
@@ -146,14 +147,21 @@ nav {
 .objective-sec {
   padding-left: 0;
   .objective-div {
-    transform: skewY(-2.5deg);
-    transform-origin: 100%;
+    //transform: skewY(-2.5deg);
+    //transform-origin: 100%;
     display: block;
     background: rgba(4, 65, 134, 0.562);
     padding: 1em;
     margin-left: 0;
     max-width: 690px;
 
+    .objective-head {
+      display: block;
+      color: white;
+      padding-bottom: 2em;
+      //transform: skewY(2.5deg);
+      text-align: center;
+    }
     .objective-para {
       display: block;
       border: 3px solid rgba(4, 65, 134, 0.562);
@@ -161,8 +169,8 @@ nav {
       background-color: rgb(5, 5, 5);
       padding: 1em;
       color: white;
-      transform: skewY(2.5deg);
-      transform-origin: 100%;
+      //transform: skewY(2.5deg);
+      //transform-origin: 100%;
       margin-top: -2em;
     }
   }
@@ -178,18 +186,26 @@ nav {
   //border: 5px white;
   background: yello;
   .ed-dev {
-    transform: skewY(-2.5deg);
-    transform-origin: 100%;
+    //transform: skewY(-2.5deg);
+    //transform-origin: 100%;
     display: block;
     background: rgba(4, 65, 134, 0.562);
     padding: 1em;
     //margin-right: 1em;
     max-width: 690px;
 
+    .ed-head {
+      display: block;
+      color: white;
+      padding-bottom: 2em;
+      //transform: skewY(2.5deg);
+      text-align: center;
+    }
+
     .ed-table {
       color: white;
       text-align: center;
-      transform: skewY(2.5deg);
+      //transform: skewY(2.5deg);
       display: block;
       border-radius: 1em;
       background: black;
@@ -213,93 +229,166 @@ nav {
   }
 }
 
-.project-sec {
-  //color: white;
-  display: flex;
-  overflow-x: auto;
-  .project-div {
+.skills-sec {
+  background-color: rgba(4, 65, 134, 0.562);
+  //overflow-x: scroll;
+  margin-top: 4em;
+
+  .skills-head {
     display: block;
-    align-items: center;
-    padding: 1em;
-    border: 3px solid rgba(4, 65, 134, 0.562);
-    border-radius: 10%;
+    color: white;
     text-align: center;
-    margin: 1em;
-    max-width: 350px;
-    min-width: 220px;
-    margin-bottom: 1em;
-    //padding-bottom: 1em;
+  }
 
-    h1 {
-      font-size: 1.5em;
-      line-height: 1.3em;
-      margin-top: 0em;
-      margin-bottom: 0.2em;
+  .skills {
+    display: grid;
+    overflow-x: auto;
+    justify-items: center;
 
-      a {
-        text-decoration: none;
+    .skill-div {
+      display: flex;
+      text-align: center;
+      padding: 1em;
+      div:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.486);
+      }
+
+      div:nth-child(even) {
+        background-color: rgba(36, 18, 201, 0.301);
+      }
+      .skill {
+        width: 200px;
+        height: 100px;
+        border-radius: 100%;
+        margin-left: -20px;
+        color: white;
+        padding-top: 40px;
+      }
+      li:nth-child(odd) {
+        color: white;
+      }
+
+      li:nth-child(even) {
         color: var(--primary-color);
       }
     }
-
-    span {
-      color: white;
-      font-size: 1.2em;
-      font-weight: bold;
-    }
-
-    p {
-      color: white;
-    }
-
-    .discreption {
-      color: whitesmoke;
-      font-size: small;
-    }
-
-    .open-btn {
-      display: block;
-      background: var(--primary-color);
-      text-decoration: none;
-      text-align: center;
-      padding: 0.5em;
-      border-radius: 1em;
-      margin-bottom: 0;
-    }
   }
 }
 
-.construction-sec {
-  display: block;
-  .const-div {
+.project-sec {
+  //color: white;
+  margin-top: 4em;
+  background-color: rgba(4, 65, 134, 0.562);
+  .project-head {
+    display: block;
+    color: white;
+    //padding-bottom: 2em;
     text-align: center;
-    padding: 2em;
-    animation: constanimation 4s infinite;
+  }
 
-    h1 {
-      color: rgb(255, 255, 255);
-    }
+  .projects {
+    display: flex;
+    overflow-x: auto;
 
-    @keyframes constanimation {
-      0% {
-        background-color: rgba(255, 0, 0, 0.521);
+    .project-div {
+      background-color: black;
+      display: block;
+      align-items: center;
+      padding: 1em;
+      border: 3px solid rgba(4, 65, 134, 0.562);
+      border-radius: 10%;
+      text-align: center;
+      margin: 1em;
+      max-width: 350px;
+      min-width: 220px;
+      margin-bottom: 1em;
+      //padding-bottom: 1em;
+
+      h1 {
+        font-size: 1.5em;
+        line-height: 1.3em;
+        margin-top: 0em;
+        margin-bottom: 0.2em;
+
+        a {
+          text-decoration: none;
+          color: var(--primary-color);
+        }
       }
-      25% {
-        background-color: rgba(255, 0, 200, 0.438);
+
+      span {
+        color: white;
+        font-size: 1.2em;
+        font-weight: bold;
       }
-      50% {
-        background-color: rgba(0, 0, 255, 0.466);
+
+      p {
+        color: white;
       }
-      75% {
-        background-color: rgba(0, 128, 0, 0.466);
+
+      .discreption {
+        color: whitesmoke;
+        font-size: small;
       }
-      100% {
-        background-color: rgba(255, 0, 0, 0.473);
+
+      .open-btn {
+        display: block;
+        background: var(--primary-color);
+        text-decoration: none;
+        text-align: center;
+        padding: 0.5em;
+        border-radius: 1em;
+        margin-bottom: 0;
       }
     }
   }
 }
 
+
+.contact-sec {
+  h1{
+    text-align: center;
+    color: white;
+  }
+  .container {
+    .contact-left {
+      padding-bottom: 1em;
+      .contact-head {
+        padding: 1em;
+      }
+      .contact-list {
+        .contact {
+          padding: 0.5em;
+          a {
+            text-decoration: none;
+
+            .icon {
+              //margin-left: .5em;
+              margin-bottom: -0.5em;
+              padding-right: 1em;
+              width: 1.5em;
+              height: 1.5em;
+              //border-radius: 20px;
+              transition: all 0.3s;
+              cursor: pointer;
+              align-items: center;
+              justify-content: center;
+
+              &:hover {
+                transform: scale(1.25);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    iframe {
+      width: 100%;
+      height: 300px;
+    }
+  }
+}
 @media only screen and (min-width: 768px) {
   .mobile-menu,
   .mobile-menu-exit {
@@ -367,39 +456,82 @@ nav {
     }
   }
 
-  @media only screen and (min-width: 1080px) {
-    .ed-sec {
+  .contact-sec {
+    position: relative;
 
-        &:before {
-            content: '';
-            position: absolute;
-            width: 20%;
-            height: 20em;
-            //border-radius: 100%;
-            background: var(--primary-color);
-            right: 0;
-            margin-top: -7em;
-            transform: skewY(-2.5deg);
-            //top: -4em;
-        }
+    .container {
+      display: flex;
+      .contact-left {
+        width: 50%;
+      }
+      .contact-right {
+        //position: absolute;
+        right: 0;
+        //top: 0;
+        width: 50%;
+        //height: 100%;
 
-        &:after {
-            content: '';
-            position: absolute;
-            width: 200px;
-            height: 20em;
-            background: url('../images/dots.svg') no-repeat;
-            right: 8em;
-            margin-top: -16em;
-            transform: skewY(2.5deg);
+        iframe {
+          width: 100%;
+          //height: 100%;
         }
+      }
     }
+  }
 }
+@media only screen and (min-width: 1080px) {
+  .ed-sec {
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20%;
+      height: 27em;
+      //border-radius: 100%;
+      background: var(--primary-color);
+      right: 0;
+      margin-top: -13em;
+      transform: skewY(-2.5deg);
+      //top: -4em;
+      animation: coloranimation 4s infinite linear;
 
-  .ed-sec{
+      @keyframes coloranimation {
+        0% {
+          background-color: rgba(255, 0, 0, 0.521);
+        }
+        25% {
+          background-color: rgba(255, 0, 200, 0.438);
+        }
+        50% {
+          background-color: rgba(0, 0, 255, 0.466);
+        }
+        75% {
+          background-color: rgba(0, 128, 0, 0.466);
+        }
+        100% {
+          background-color: rgba(255, 0, 0, 0.473);
+        }
+      }
+    }
 
-    .ed-dev{
-      color: white;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 200px;
+      height: 12.5em;
+      border-radius: 100%;
+      background: url("../images/chakra.svg") no-repeat;
+      right: 9.5em;
+      margin-top: -30em;
+      animation: chakraamimation 10s infinite linear;
+
+      @keyframes chakraamimation {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
     }
   }
 }

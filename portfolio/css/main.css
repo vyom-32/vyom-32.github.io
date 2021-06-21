@@ -5,6 +5,7 @@
 
 body {
   background: black;
+  color: white;
   margin: 0;
   font-family: "Poppins";
 }
@@ -154,15 +155,18 @@ nav li a:hover {
 }
 
 .objective-sec .objective-div {
-  -webkit-transform: skewY(-2.5deg);
-          transform: skewY(-2.5deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
   display: block;
   background: rgba(4, 65, 134, 0.562);
   padding: 1em;
   margin-left: 0;
   max-width: 690px;
+}
+
+.objective-sec .objective-div .objective-head {
+  display: block;
+  color: white;
+  padding-bottom: 2em;
+  text-align: center;
 }
 
 .objective-sec .objective-div .objective-para {
@@ -172,10 +176,6 @@ nav li a:hover {
   background-color: #050505;
   padding: 1em;
   color: white;
-  -webkit-transform: skewY(2.5deg);
-          transform: skewY(2.5deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
   margin-top: -2em;
 }
 
@@ -188,10 +188,6 @@ nav li a:hover {
 }
 
 .ed-sec .ed-dev {
-  -webkit-transform: skewY(-2.5deg);
-          transform: skewY(-2.5deg);
-  -webkit-transform-origin: 100%;
-          transform-origin: 100%;
   display: block;
   background: rgba(4, 65, 134, 0.562);
   padding: 1em;
@@ -199,11 +195,16 @@ nav li a:hover {
   scrollbar-width: 0;
 }
 
+.ed-sec .ed-dev .ed-head {
+  display: block;
+  color: white;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
 .ed-sec .ed-dev .ed-table {
   color: white;
   text-align: center;
-  -webkit-transform: skewY(2.5deg);
-          transform: skewY(2.5deg);
   display: block;
   border-radius: 1em;
   background: black;
@@ -224,14 +225,77 @@ nav li a:hover {
   padding: 1em;
 }
 
+.skills-sec {
+  background-color: rgba(4, 65, 134, 0.562);
+  margin-top: 4em;
+}
+
+.skills-sec .skills-head {
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.skills-sec .skills {
+  display: -ms-grid;
+  display: grid;
+  overflow-x: auto;
+  justify-items: center;
+}
+
+.skills-sec .skills .skill-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  padding: 1em;
+}
+
+.skills-sec .skills .skill-div div:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.486);
+}
+
+.skills-sec .skills .skill-div div:nth-child(even) {
+  background-color: rgba(36, 18, 201, 0.301);
+}
+
+.skills-sec .skills .skill-div .skill {
+  width: 200px;
+  height: 100px;
+  border-radius: 100%;
+  margin-left: -20px;
+  color: white;
+  padding-top: 40px;
+}
+
+.skills-sec .skills .skill-div li:nth-child(odd) {
+  color: white;
+}
+
+.skills-sec .skills .skill-div li:nth-child(even) {
+  color: var(--primary-color);
+}
+
 .project-sec {
+  margin-top: 4em;
+  background-color: rgba(4, 65, 134, 0.562);
+}
+
+.project-sec .project-head {
+  display: block;
+  color: white;
+  text-align: center;
+}
+
+.project-sec .projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
 }
 
-.project-sec .project-div {
+.project-sec .projects .project-div {
+  background-color: black;
   display: block;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -246,34 +310,34 @@ nav li a:hover {
   margin-bottom: 1em;
 }
 
-.project-sec .project-div h1 {
+.project-sec .projects .project-div h1 {
   font-size: 1.5em;
   line-height: 1.3em;
   margin-top: 0em;
   margin-bottom: 0.2em;
 }
 
-.project-sec .project-div h1 a {
+.project-sec .projects .project-div h1 a {
   text-decoration: none;
   color: var(--primary-color);
 }
 
-.project-sec .project-div span {
+.project-sec .projects .project-div span {
   color: white;
   font-size: 1.2em;
   font-weight: bold;
 }
 
-.project-sec .project-div p {
+.project-sec .projects .project-div p {
   color: white;
 }
 
-.project-sec .project-div .discreption {
+.project-sec .projects .project-div .discreption {
   color: whitesmoke;
   font-size: small;
 }
 
-.project-sec .project-div .open-btn {
+.project-sec .projects .project-div .open-btn {
   display: block;
   background: var(--primary-color);
   text-decoration: none;
@@ -283,55 +347,51 @@ nav li a:hover {
   margin-bottom: 0;
 }
 
-.construction-sec {
-  display: block;
-}
-
-.construction-sec .const-div {
+.contact-sec h1 {
   text-align: center;
-  padding: 2em;
-  -webkit-animation: constanimation 4s infinite;
-          animation: constanimation 4s infinite;
-}
-
-.construction-sec .const-div h1 {
   color: white;
 }
 
-@-webkit-keyframes constanimation {
-  0% {
-    background-color: rgba(255, 0, 0, 0.521);
-  }
-  25% {
-    background-color: rgba(255, 0, 200, 0.438);
-  }
-  50% {
-    background-color: rgba(0, 0, 255, 0.466);
-  }
-  75% {
-    background-color: rgba(0, 128, 0, 0.466);
-  }
-  100% {
-    background-color: rgba(255, 0, 0, 0.473);
-  }
+.contact-sec .container .contact-left {
+  padding-bottom: 1em;
 }
 
-@keyframes constanimation {
-  0% {
-    background-color: rgba(255, 0, 0, 0.521);
-  }
-  25% {
-    background-color: rgba(255, 0, 200, 0.438);
-  }
-  50% {
-    background-color: rgba(0, 0, 255, 0.466);
-  }
-  75% {
-    background-color: rgba(0, 128, 0, 0.466);
-  }
-  100% {
-    background-color: rgba(255, 0, 0, 0.473);
-  }
+.contact-sec .container .contact-left .contact-head {
+  padding: 1em;
+}
+
+.contact-sec .container .contact-left .contact-list .contact {
+  padding: 0.5em;
+}
+
+.contact-sec .container .contact-left .contact-list .contact a {
+  text-decoration: none;
+}
+
+.contact-sec .container .contact-left .contact-list .contact a .icon {
+  margin-bottom: -0.5em;
+  padding-right: 1em;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  cursor: pointer;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact-sec .container .contact-left .contact-list .contact a .icon:hover {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+}
+
+.contact-sec .container iframe {
+  width: 100%;
+  height: 300px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -405,36 +465,105 @@ nav li a:hover {
   .section-1 .container .right-side h1 {
     font-size: 3em;
   }
+  .contact-sec {
+    position: relative;
+  }
+  .contact-sec .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .contact-sec .container .contact-left {
+    width: 50%;
+  }
+  .contact-sec .container .contact-right {
+    right: 0;
+    width: 50%;
+  }
+  .contact-sec .container .contact-right iframe {
+    width: 100%;
+  }
 }
 
-@media only screen and (min-width: 800px) and (min-width: 1080px) {
+@media only screen and (min-width: 1080px) {
   .ed-sec:before {
-    content: '';
+    content: "";
     position: absolute;
     width: 20%;
-    height: 20em;
+    height: 27em;
     background: var(--primary-color);
     right: 0;
-    margin-top: -7em;
+    margin-top: -13em;
     -webkit-transform: skewY(-2.5deg);
             transform: skewY(-2.5deg);
+    -webkit-animation: coloranimation 4s infinite linear;
+            animation: coloranimation 4s infinite linear;
+  }
+  @-webkit-keyframes coloranimation {
+    0% {
+      background-color: rgba(255, 0, 0, 0.521);
+    }
+    25% {
+      background-color: rgba(255, 0, 200, 0.438);
+    }
+    50% {
+      background-color: rgba(0, 0, 255, 0.466);
+    }
+    75% {
+      background-color: rgba(0, 128, 0, 0.466);
+    }
+    100% {
+      background-color: rgba(255, 0, 0, 0.473);
+    }
+  }
+  @keyframes coloranimation {
+    0% {
+      background-color: rgba(255, 0, 0, 0.521);
+    }
+    25% {
+      background-color: rgba(255, 0, 200, 0.438);
+    }
+    50% {
+      background-color: rgba(0, 0, 255, 0.466);
+    }
+    75% {
+      background-color: rgba(0, 128, 0, 0.466);
+    }
+    100% {
+      background-color: rgba(255, 0, 0, 0.473);
+    }
   }
   .ed-sec:after {
-    content: '';
+    content: "";
     position: absolute;
     width: 200px;
-    height: 20em;
-    background: url("../images/dots.svg") no-repeat;
-    right: 8em;
-    margin-top: -16em;
-    -webkit-transform: skewY(2.5deg);
-            transform: skewY(2.5deg);
+    height: 12.5em;
+    border-radius: 100%;
+    background: url("../images/chakra.svg") no-repeat;
+    right: 9.5em;
+    margin-top: -30em;
+    -webkit-animation: chakraamimation 10s infinite linear;
+            animation: chakraamimation 10s infinite linear;
   }
-}
-
-@media only screen and (min-width: 800px) {
-  .ed-sec .ed-dev {
-    color: white;
+  @-webkit-keyframes chakraamimation {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
+  }
+  @keyframes chakraamimation {
+    from {
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+              transform: rotate(360deg);
+    }
   }
 }
 /*# sourceMappingURL=main.css.map */
