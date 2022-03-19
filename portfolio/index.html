@@ -2,268 +2,233 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vyom Sarsavadiya</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/slick/slick.css" />
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="container">
-            <a class="logo" href="#">Hello<span>World</span></a>
-
-            <img id="mobile-menu" class="mobile-menu" src="images/menu.svg" alt="Open menu items">
-            <nav>
-                <img id="exit-mobile-menu" class="mobile-menu-exit" src="images/exit.svg" alt="Exit menu items">
-                <ul class="primary-nav">
+    <header class="header-section">
+        <div class="container flex justify-ends">
+            <a href="#" class="title font-nunito-bold font-color-white">
+                Vyom<span class="font-color-blue">Sarsavadiya</span>
+            </a>
+            <svg id="menuBtn" class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12"
+                viewBox="0 0 18.853 12">
+                <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-4.5 -8)">
+                    <path id="Path_3" data-name="Path 3" d="M4.5,18H23.353" transform="translate(0 -4)" fill="none"
+                        stroke="white" stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_4" data-name="Path 4" d="M4.5,9H23.353" transform="translate(0)" fill="none"
+                        stroke="white" stroke-linejoin="round" stroke-width="2" />
+                    <path id="Path_5" data-name="Path 5" d="M4.5,27H23.353" transform="translate(0 -8)" fill="none"
+                        stroke="white" stroke-linejoin="round" stroke-width="2" />
+                </g>
+            </svg>
+            <div class="nav">
+                <div class="close-wrapper flex">
+                    <svg id="closeMenu" class="menu-exit" xmlns="http://www.w3.org/2000/svg" width="20.953"
+                        height="20.953" viewBox="0 0 20.953 20.953">
+                        <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close"
+                            d="M28.477,9.619l-2.1-2.1L18,15.9,9.619,7.523l-2.1,2.1L15.9,18,7.523,26.381l2.1,2.1L18,20.1l8.381,8.381,2.1-2.1L20.1,18Z"
+                            transform="translate(-7.523 -7.523)" fill="#000" />
+                    </svg>
+                </div>
+                <ul class="nav-list">
                     <li><a href="#">Home</a></li>
-                    <li><a href="#education">Education</a></li>
+                    <li><a href="#aboutMe">About me</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
-                </ul>
-                <ul class="secondary-nav">
-                    <li><a href="documents/Resume_Vyom_Sarsavadiya.pdf" target="_blank">Resume</a></li>
+                    <li><a href="./assets/documents/Resume_Vyom_Sarsavadiya.pdf" target="_blank">Resume</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
+    </header>
+    <section id="home" class="banner-section new-section">
+        <div class="container flex justify-even align-items-center">
+            <div class="profile-wrapper">
+                <img src="./assets/img/profile.jpeg" alt="" class="profile-img" />
+            </div>
+            <div class="content-wrapper flex flex-column">
+                <h2 class="heading font-color-white font-nunito-extrabold">Vyom</h2>
+                <h2 class="heading bg-gradient-blue font-nunito-extrabold font-color-blue">
+                    Sarsavadiya
+                </h2>
+            </div>
+        </div>
+    </section>
+    <section id="aboutMe" class="about-me-section new-section">
+        <div class="container flex align-items-center justify-center flex-column">
+            <h2 class="section-heading font-color-white">About me</h2>
+            <div class="card about-me-wrapper flex justify-even align-items-center">
+                <img src="./assets/img/person-img1.png" alt="cartoon image" class="about-me-img" />
+                <div
+                    class="content-wrapper flex flex-column align-items-center font-color-gray font-nunito text-align-center">
+                    <h3 class="greetings">Hii There!!</h3>
+                    <h3 class="title">I am Vyom Sarsavadiya</h3>
+                    <p class="description">
+                        Final year computer engineering student at Dharmsinh Desai
+                        University, Nadiad. Currently a MEAN stack intern at Adrixus Tech
+                        Studio, Vadodara. I found my interest in full stack development
+                        and i'm doing my best to learn new things ragularly. I love
+                        working in challenging environment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills-section new-section">
+        <div class="container flex align-items-center justify-center flex-column">
+            <h2 class="section-heading font-color-white">Skills</h2>
+            <div class="card skills-wrapper flex flex-wrap align-items-center justify-center">
+                <div class="skill">c</div>
+                <div class="skill">c++</div>
+                <div class="skill">python</div>
+                <div class="skill">java</div>
+                <div class="skill">javascript</div>
+                <div class="skill">HTML</div>
+                <div class="skill">CSS</div>
+                <div class="skill">MySQL</div>
+                <div class="skill">MongoDB</div>
+                <div class="skill">SQLite</div>
+                <div class="skill">Angular</div>
+                <div class="skill">ExpressJs</div>
+                <div class="skill">.NET Core</div>
+                <div class="skill">Django</div>
+                <div class="skill">React</div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="projects-section new-section">
+        <div class="container flex align-items-center justify-center flex-column">
+            <h2 class="section-heading font-color-white">Projects</h2>
+            <div class="card">
+                <div class="projects-next arrow flex justify-center align-items-center">
+                    <img src="./assets/img/next-icon.svg" alt="next-icon" class="next-icon" />
+                </div>
+                <div class="projects-prev arrow flex justify-center align-items-center">
+                    <img src="./assets/img/prev-icon.svg" alt="prev-icon" class="prev-icon" />
+                </div>
+                <div class="projects-wrapper">
+                    <div class="project-box-wrapper">
+                        <div class="project-box">
+                            <h3 class="title">Web Sudoku</h3>
+                            <h4 class="tech-stack">ASP.NET Core MVC, Entity Framework</h4>
+                            <p class="description">
+                                Web Sudoku is online portal where user can play sudoku with
+                                diffrent difficulty levels available.
+                            </p>
+                            <a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku"
+                                class="link">
+                                <img src="./assets/img/github.svg" alt="github-icon" />
+                                <span class="text">Open in github</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-box-wrapper">
+                        <div class="project-box">
+                            <h3 class="title">Portfolio</h3>
+                            <h4 class="tech-stack">HTML, CSS, javascript</h4>
+                            <p class="description">
+                                Designed a Portfolio website using html,css and vanila javascript
+                            </p>
+                            <a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku"
+                                class="link">
+                                <img src="./assets/img/github.svg" alt="github-icon" />
+                                <span class="text">Open in github</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-box-wrapper">
+                        <div class="project-box">
+                            <h3 class="title">Online Bidding</h3>
+                            <h4 class="tech-stack">Django Framework, SQLite</h4>
+                            <p class="description">
+                                Online Biddinng system is an online portal where users can
+                                arrange online auctions and interested users can participate in
+                                them.
+                            </p>
+                            <a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku"
+                                class="link">
+                                <img src="./assets/img/github.svg" alt="github-icon" />
+                                <span class="text">Open in github</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-box-wrapper">
+                        <div class="project-box">
+                            <h3 class="title">Electrify</h3>
+                            <h4 class="tech-stack">NodeJs, Angular, Express, MongoDB</h4>
+                            <p class="description">
+                                Online portal to digitalize electricity billing system And also
+                                digitalize new-connection requests
+                            </p>
+                            <a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku"
+                                class="link">
+                                <img src="./assets/img/github.svg" alt="github-icon" />
+                                <span class="text">Open in github</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-box-wrapper">
+                        <div class="project-box">
+                            <h3 class="title">BestResource.com</h3>
+                            <h4 class="tech-stack">NodeJs, Angular, Express, MongoDB</h4>
+                            <p class="description">
+                                Online portal where geeks can share links of useful resource
+                            </p>
+                            <a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku"
+                                class="link">
+                                <img src="./assets/img/github.svg" alt="" />
+                                <span class="text">Open in github</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section new-section">
+        <div class="container flex align-items-center justify-center flex-column text-align-center">
+            <h2 class="section-heading font-color-white">Contact</h2>
+            <div class="card">
+                <p class="description font-nunito font-color-gray">
+                    Thanks for stopping by! Swing by for a cup of tea, or leave me an email. Believe me or not, my
+                    inbox is open sometimes!
+                </p>
+                <div class="contact-list flex justify-center flex-column">
+                    <a class="contact-item" href="mailto:vyom95745@gmail.com" target="_blank">
+                        <img class="icon" src="./assets/img/mail.svg" alt="Mail" srcset="">
+                        vyompatel95745@gmail.com
+                    </a>
+                    <a class="contact-item" href="https://github.com/vyom-32" target="_blank">
+                        <img class="icon" src="./assets/img/github.svg" alt="Github" srcset="">
+                        vyom-32
+                    </a>
+                    <a class="contact-item" href="https://www.linkedin.com/in/vyom-sarsavadiya" target="_blank">
+                        <img class="icon" src="./assets/img/linkedin.svg" alt="LinkedIn" srcset="">
+                        Vyom Sarsavadiya
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="scroll-wrapper">
+        <ul class="scroll-list ui-flex" id="navDots">
+            <li class="scroll-dot"></li>
+            <li class="scroll-dot"></li>
+            <li class="scroll-dot"></li>
+            <li class="scroll-dot"></li>
+            <li class="scroll-dot"></li>
+        </ul>
     </div>
-    
-    <section class="section-1">
-        <div class="container">
-            <img class="profile-pic" src="images/image1.jpg" alt="Profile picture">
-            <div class="right-side">
-                <p class="subhead">Hello World!</p>
-                <h1>Vyom</h1>
-                <h2>Sarsavadiya</h2>
-                <p class="subhead">Here</p>
-            </div>
-
-        </div>
-    </section>
-    <section class="objective-sec">
-        <div class="objective-div">
-            <h1 class="objective-head">Objective</h1>
-            <p class="objective-para">
-                Objective is to work in a field which makes me interested and gives enough scope to utilize my skills for the
-                betterment
-                of the organization. Enrichment of skills and gaining experience with my passion and hard work is
-                my top priority.
-            </p>
-        </div>
-    </section>
-    <section class="ed-sec" id="education">
-        <div class="ed-dev">
-            <h1 class="ed-head">Education</h1>
-            <table class="ed-table">
-                <tr>
-                    <td>B.Tech<br>(Computer Engineering)</td>
-                    <td>Dharmsinh Desai<br>University, Nadiad</td>
-                    <td>May-2022<br>(Expected)</td>
-                    <td>7.88 CPI<br>(As of sem6)</td>
-                </tr>
-                <tr>
-                    <td>HSC</td>
-                    <td>GHSEB</td>
-                    <td>March-2018</td>
-                    <td>99.36<br>percentile</td>
-                </tr>
-                <tr>
-                    <td>SSC</td>
-                    <td>GSEB</td>
-                    <td>March-2016</td>
-                    <td>99.30<br>percentile</td>
-                </tr>
-            </table>
-        </div>
-    </section>
-    <section id="skills" class="skills-sec">
-        <h1 class="skills-head">Skills</h1>
-        <section class="skills">
-            <div class="skill-div">
-                <div class="skill">
-                    <h1>C</h1>
-                </div>
-                <div class="skill">
-                    <h1>C++</h1>
-                </div>
-                <div class="skill">
-                    <h1>Python</h1>
-                </div>
-                <div class="skill">
-                    <h1>Java</h1>
-                </div>
-            </div>
-            <div class="skill-div">
-                <div class="skill">
-                    <h1>MySQL</h1>
-                </div>
-                <div class="skill">
-                    <h1>MongoDB</h1>
-                </div>
-                <div class="skill">
-                    <h1>SQLite</h1>
-                </div>
-                <div class="skill">
-                    <h1>HTML</h1>
-                </div>
-                <div class="skill">
-                    <h1>CSS</h1>
-                </div>
-                <div class="skill">
-                    <h1>Javascript</h1>
-                </div>
-            </div>
-            <div class="skill-div">
-                <div class="skill">
-                    <h1>DSA</h1>
-                </div>
-                <div class="skill">
-                    <h1>OS</h1>
-                </div>
-                <div class="skill">
-                    <h1>DBMS</h1>
-                </div>
-                <div class="skill">
-                    <h1>SE</h1>
-                </div>
-                <div class="skill">
-                    <h1>OOSE</h1>
-                </div>
-            </div>
-            <div class="skill-div">
-                <div class="skill">
-                    <h1>Angular</h1>
-                </div>
-                <div class="skill">
-                    <h1>ExpressJS</h1>
-                </div>
-                <div class="skill">
-                    <h1>ASP.NET Core</h1>
-                </div>
-                <div class="skill">
-                    <h1>Django</h1>
-                </div>
-            </div>
-
-        </section>
-    </section>
-    <section class="project-sec" id="projects">
-        <h1 class="project-head">Projects</h1>
-        <section class="projects">
-            <div class="project-div">
-                <h1><a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku">Web Sudoku</a></h1>
-                <ul>
-                    <li>
-                        <p><span>Technologies : </span>ASP.NET Core MVC, Entity Framework</p>
-                    </li>
-                    <li>
-                        <p class="discreption">Web Sudoku is online portal where user can play sudoku with diffrent
-                            difficulty levels available.</p>
-                    </li>
-                </ul>
-                <a class="open-btn" target="_blank" href="https://github.com/vyom-32/Projects/tree/master/sudoku">Open
-                    in Github</a>
-            </div>
-            <div class="project-div">
-                <h1><a target="_blank" href="https://github.com/vyom-32/Projects/tree/master/bidding">Online Bidding</a>
-                </h1>
-                <ul>
-                    <li>
-                        <p><span>Technologies : </span>Django Framework, SQLite</p>
-                    </li>
-                    <li>
-                        <p class="discreption">Online Biddinng system is an online portal where users can arrange online
-                            auctions and interested users can participate in them.</p>
-                    </li>
-                </ul>
-                <a class="open-btn" target="_blank" href="https://github.com/vyom-32/Projects/tree/master/bidding">Open
-                    in Github</a>
-            </div>
-            <div class="project-div">
-                <h1><a target="_blank" href="https://github.com/vyom-32/Electrify/tree/main/SDP_Project">Electrify</a>
-                </h1>
-                <ul>
-                    <li>
-                        <p><span>Technologies : </span>NodeJs, Angular, Express, MongoDB</p>
-                    </li>
-                    <li>
-                        <p class="discreption">Online portal to digitalize electricity billing system And also
-                            digitalize new-connection requests</p>
-                    </li>
-                </ul>
-                <a class="open-btn" target="_blank"
-                    href="https://github.com/vyom-32/Electrify/tree/main/SDP_Project">Open in Github</a>
-            </div>
-            <div class="project-div">
-                <h1><a target="_blank" href="https://github.com/vyom-32/BestResource.com">BestResource.com</a></h1>
-                <ul>
-                    <li>
-                        <p><span>Technologies : </span>NodeJs, Angular, Express, MongoDB</p>
-                    </li>
-                    <li>
-                        <p class="discreption">Online portal where geeks can share links of useful resource </p>
-                    </li>
-                </ul>
-                <br />
-                <a class="open-btn" target="_blank" href="https://github.com/vyom-32/BestResource.com">Open in
-                    Github</a>
-            </div>
-        </section>
-    </section>
-    
-    <section class="contact-sec" id="contact">
-        <h1>Contact</h1>
-        <div class="container">
-            <div class="contact-left">
-                <div class="contact-head">
-                    <p>Thanks for stopping by! Swing by for a cup of tea, or leave me an email. Believe me or not, my
-                        inbox is open sometimes!</p>
-                </div>
-                <div class="contact-list">
-                    <div class="contact">
-                        <a href="mailto:vyom95745@gmail.com" target="_blank"><img class="icon"
-                                src="images/mail.svg" alt="Mail" srcset="">vyompatel95745@gmail.com</a>
-                    </div>
-                    <div class="contact">
-                        <a href="https://github.com/vyom-32" target="_blank"><img class="icon"
-                                src="images/github.svg" alt="Github" srcset="">vyom-32</a>
-                    </div>
-                    <div class="contact">
-                        <a href="https://www.linkedin.com/in/vyom-sarsavadiya" target="_blank"><img class="icon"
-                                src="images/linkedin.svg" alt="LinkedIn" srcset="">Vyom Sarsavadiya</a>
-                    </div>
-                </div>
-            </div>
-            <div class="contact-right">
-                <iframe class="address"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.7685173273567!2d71.10165961441663!3d22.662417735380178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39599ed500367cef%3A0xe5cf8560dadf441a!2sLunsar%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1624178931643!5m2!1sen!2sin"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- script code -->
-    <script>
-        const mobileBtn = document.getElementById('mobile-menu')
-        nav = document.querySelector('nav')
-        mobileBtnExit = document.getElementById('exit-mobile-menu');
-
-        mobileBtn.addEventListener('click', () => {
-            nav.classList.add('menu-btn');
-            mobileBtn.hidden = true
-        })
-
-        mobileBtnExit.addEventListener('click', () => {
-            nav.classList.remove('menu-btn');
-            mobileBtn.hidden = false
-        })
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./assets/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./assets/javascript/main.js"></script>
     </script>
-
 </body>
 
 </html>
