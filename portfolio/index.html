@@ -17,25 +17,29 @@
             <a href="#" class="title font-nunito-bold font-color-white">
                 Vyom<span class="font-color-blue">Sarsavadiya</span>
             </a>
-            <svg id="menuBtn" class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12"
-                viewBox="0 0 18.853 12">
-                <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-4.5 -8)">
-                    <path id="Path_3" data-name="Path 3" d="M4.5,18H23.353" transform="translate(0 -4)" fill="none"
-                        stroke="white" stroke-linejoin="round" stroke-width="2" />
-                    <path id="Path_4" data-name="Path 4" d="M4.5,9H23.353" transform="translate(0)" fill="none"
-                        stroke="white" stroke-linejoin="round" stroke-width="2" />
-                    <path id="Path_5" data-name="Path 5" d="M4.5,27H23.353" transform="translate(0 -8)" fill="none"
-                        stroke="white" stroke-linejoin="round" stroke-width="2" />
-                </g>
-            </svg>
+            <div class="menu-icon-wrapper" id="menuBtn">
+                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="18.853" height="12"
+                    viewBox="0 0 18.853 12">
+                    <g id="Icon_feather-menu" data-name="Icon feather-menu" transform="translate(-4.5 -8)">
+                        <path id="Path_3" data-name="Path 3" d="M4.5,18H23.353" transform="translate(0 -4)" fill="none"
+                            stroke="white" stroke-linejoin="round" stroke-width="2" />
+                        <path id="Path_4" data-name="Path 4" d="M4.5,9H23.353" transform="translate(0)" fill="none"
+                            stroke="white" stroke-linejoin="round" stroke-width="2" />
+                        <path id="Path_5" data-name="Path 5" d="M4.5,27H23.353" transform="translate(0 -8)" fill="none"
+                            stroke="white" stroke-linejoin="round" stroke-width="2" />
+                    </g>
+                </svg>
+            </div>
             <div class="nav">
                 <div class="close-wrapper flex">
-                    <svg id="closeMenu" class="menu-exit" xmlns="http://www.w3.org/2000/svg" width="20.953"
-                        height="20.953" viewBox="0 0 20.953 20.953">
-                        <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close"
-                            d="M28.477,9.619l-2.1-2.1L18,15.9,9.619,7.523l-2.1,2.1L15.9,18,7.523,26.381l2.1,2.1L18,20.1l8.381,8.381,2.1-2.1L20.1,18Z"
-                            transform="translate(-7.523 -7.523)" fill="#000" />
-                    </svg>
+                    <div class="menu-exit-wrapper" id="closeMenu">
+                        <svg class="menu-exit" xmlns="http://www.w3.org/2000/svg" width="20.953" height="20.953"
+                            viewBox="0 0 20.953 20.953">
+                            <path id="Icon_ionic-md-close" data-name="Icon ionic-md-close"
+                                d="M28.477,9.619l-2.1-2.1L18,15.9,9.619,7.523l-2.1,2.1L15.9,18,7.523,26.381l2.1,2.1L18,20.1l8.381,8.381,2.1-2.1L20.1,18Z"
+                                transform="translate(-7.523 -7.523)" fill="#000" />
+                        </svg>
+                    </div>
                 </div>
                 <ul class="nav-list">
                     <li><a href="#">Home</a></li>
@@ -242,7 +246,7 @@
                     inbox is open sometimes!
                 </p>
                 <div class="contact-list flex justify-center flex-column">
-                    <a class="contact-item" href="mailto:vyom95745@gmail.com" target="_blank">
+                    <a class="contact-item" href="mailto:vyompatel95745@gmail.com" target="_blank">
                         <img class="icon" src="./assets/img/mail.svg" alt="Mail" srcset="">
                         vyompatel95745@gmail.com
                     </a>

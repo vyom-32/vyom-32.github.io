@@ -322,6 +322,26 @@ a {
   right: 0px;
   display: none;
 }
+.header-section .menu-icon-wrapper {
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+.header-section .menu-icon-wrapper:hover {
+  background-color: #3ad1ff3b;
+}
+.header-section .menu-exit-wrapper {
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 100%;
+  box-sizing: border-box;
+  transition: 0.2s;
+}
+.header-section .menu-exit-wrapper:hover {
+  background-color: #3ad1ff3b;
+}
 .header-section .nav {
   padding: 20px;
   background: white;
@@ -355,6 +375,15 @@ a {
 .header-section .nav .nav-list li a {
   color: #0f1626;
   text-decoration: none;
+  padding: 5px 10px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+.header-section .nav .nav-list li a:hover {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
 }
 @media screen and (max-width: 551px) {
   .header-section {
