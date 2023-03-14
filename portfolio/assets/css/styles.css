@@ -2,46 +2,57 @@
   font-family: Montserrat-SemiBold;
   src: url(../fonts/Montserrat/Montserrat-SemiBold.ttf);
 }
+
 @font-face {
   font-family: Montserrat-Bold;
   src: url(../fonts/Montserrat/Montserrat-Bold.ttf);
 }
+
 @font-face {
   font-family: Montserrat-Light;
   src: url(../fonts/Montserrat/Montserrat-Light.ttf);
 }
+
 @font-face {
   font-family: Montserrat;
   src: url(../fonts/Montserrat/Montserrat-Regular.ttf);
 }
+
 @font-face {
   font-family: Montserrat-Medium;
   src: url(../fonts/Montserrat/Montserrat-Medium.ttf);
 }
+
 @font-face {
   font-family: Montserrat-ExtraBold;
   src: url(../fonts/Montserrat/Montserrat-ExtraBold.ttf);
 }
+
 @font-face {
   font-family: Nunito-SemiBold;
   src: url(../fonts/Nunito/Nunito-SemiBold.ttf);
 }
+
 @font-face {
   font-family: Nunito-Bold;
   src: url(../fonts/Nunito/Nunito-Bold.ttf);
 }
+
 @font-face {
   font-family: Nunito-Light;
   src: url(../fonts/Nunito/Nunito-Light.ttf);
 }
+
 @font-face {
   font-family: Nunito;
   src: url(../fonts/Nunito/Nunito-Regular.ttf);
 }
+
 @font-face {
   font-family: Nunito-ExtraBold;
   src: url(../fonts/Nunito/Nunito-ExtraBold.ttf);
 }
+
 /* *************** Reset CSS starts here*************** */
 html,
 body,
@@ -163,6 +174,7 @@ a {
   vertical-align: baseline;
   background: transparent;
 }
+
 /* *************** Reset CSS ends here *************** */
 
 /* *************** Root styles starts here *************** */
@@ -170,7 +182,9 @@ a {
   font-size: 10px;
   background-color: #0f1626;
   color: white;
+  --glow-color: hsl(186 100% 69%);
 }
+
 /* *************** Root styles ends here *************** */
 
 /* *************** Common styles starts here *************** */
@@ -181,102 +195,154 @@ a {
   padding: 0 20px;
   box-sizing: border-box;
 }
+
 .hide {
   display: none;
 }
+
 .flex {
   display: flex;
 }
+
 .flex-wrap {
   flex-wrap: wrap;
 }
+
 .flex-column {
   flex-direction: column;
 }
+
 .justify-ends {
   justify-content: space-between;
 }
+
 .justify-center {
   justify-content: center;
 }
+
 .justify-even {
   justify-content: space-evenly;
 }
+
 .text-align-center {
   text-align: center;
 }
+
 .text-align-left {
   text-align: left;
 }
+
 .align-self-center {
   align-self: center;
 }
+
 .align-items-center {
   align-items: center;
 }
+
 .font-montserrat {
   font-family: Montserrat;
 }
+
 .font-montserrat-light {
   font-family: Montserrat-Light;
 }
+
 .font-montserrat-bold {
   font-family: Montserrat-Bold;
 }
+
 .font-montserrat-extrabold {
   font-family: Montserrat-ExtraBold;
 }
+
 .font-montserrat-semibold {
   font-family: Montserrat-SemiBold;
 }
+
 .font-montserrat-medium {
   font-family: Montserrat-Medium;
 }
+
 .font-nunito {
   font-family: Nunito;
 }
+
 .font-nunito-light {
   font-family: Nunito-Light;
 }
+
 .font-nunito-bold {
   font-family: Nunito-Bold;
 }
+
 .font-nunito-extrabold {
   font-family: Nunito-ExtraBold;
 }
+
 .font-nunito-semibold {
   font-family: Nunito-SemiBold;
 }
+
 .font-color-white {
   color: white;
 }
+
 .font-color-blue {
   color: #34b1fa;
 }
+
 .font-color-gray {
   color: rgb(226, 226, 225);
 }
+
 .font-color-antiquewhite {
   color: antiquewhite;
 }
+
 .bg-gradient-blue {
   padding: 5px 0 0;
-  background-image: linear-gradient(
-    to bottom,
-    #34b1fa 0%,
-    #34b1fa75 30%,
-    #34b1fa1e 50%,
-    transparent 100%
-  );
+  background-image: linear-gradient(to bottom,
+      rgba(97, 239, 255, 0.75) 0%,
+      rgba(97, 239, 255, 0.4) 25%,
+      rgba(97, 239, 255, 0.1) 50%,
+      transparent 85%);
+  /* background-image: linear-gradient(to bottom,
+      #34b1fa 0%,
+      #34b1fa75 30%,
+      #34b1fa1e 50%,
+      transparent 85%); */
 }
+
 .new-section {
   padding: 50px 0;
   box-sizing: border-box;
 }
+
 .section-heading {
   font-size: 6rem;
   margin: 0 0 30px 0;
+  position: relative;
+  border: none;
+  border-radius: 0.45em;
+  perspective: 1.4em;
 }
+
+.section-heading::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 25px;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  filter: blur(15px);
+  transform: translateY(120%) rotateX(95deg) scale(1.2, 0.45);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
 .card {
   background-color: #0d0d0dab;
   padding: 30px;
@@ -285,46 +351,72 @@ a {
   max-width: inherit;
   position: relative;
 }
+
 @media screen and (max-width: 767px) {
   .container {
     padding: 0 10px;
   }
+
   .section-heading {
     font-size: 4rem;
   }
+
   .card {
     padding: 20px;
     border-radius: 15px;
   }
+
   .new-section {
     padding: 35px 0;
   }
 }
+
 @media screen and (max-width: 551px) {
   .card {
     padding: 10px;
     border-radius: 10px;
   }
+
   .new-section {
     padding: 50px 0;
   }
 }
+
 /* *************** Common styles ends here *************** */
 
 /* *************** header-section styles starts here *************** */
 .header-section {
   margin: 20px 0 0;
 }
+
 .header-section .title {
   font-size: 2.4rem;
   text-decoration: none;
+  perspective: 2.4em;
 }
+.header-section .title::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  opacity: 1;
+  filter: blur(25px);
+  transform: translateY(120%) rotateX(95deg) scale(1.2, 0.45);
+  background: var(--glow-color);
+  pointer-events: none;
+}
+
+
 .header-section .nav {
   position: fixed;
   top: 0px;
   right: 0px;
   display: none;
 }
+
 .header-section .menu-icon-wrapper {
   cursor: pointer;
   padding: 15px;
@@ -332,9 +424,11 @@ a {
   box-sizing: border-box;
   transition: 0.2s;
 }
+
 .header-section .menu-icon-wrapper:hover {
   background-color: #3ad1ff3b;
 }
+
 .header-section .menu-exit-wrapper {
   cursor: pointer;
   padding: 15px;
@@ -342,9 +436,12 @@ a {
   box-sizing: border-box;
   transition: 0.2s;
 }
+
 .header-section .menu-exit-wrapper:hover {
-  background-color: #3ad1ff3b;
+  background-color: #000;
+  fill: #FFF;
 }
+
 .header-section .nav {
   padding: 20px;
   background: white;
@@ -355,26 +452,32 @@ a {
   z-index: 10000;
   animation: menuanimation 200ms;
 }
+
 @keyframes menuanimation {
   from {
     right: -200px;
   }
+
   to {
     right: 0;
   }
 }
+
 .header-section .nav .close-wrapper {
   justify-content: flex-end;
   width: 100%;
 }
+
 .header-section .nav .nav-list {
   font-family: Nunito;
   font-size: 2rem;
   list-style: none;
 }
+
 .header-section .nav .nav-list li {
   margin: 10px 0;
 }
+
 .header-section .nav .nav-list li a {
   color: #0f1626;
   text-decoration: none;
@@ -383,15 +486,18 @@ a {
   border-radius: 10px;
   transition: 0.2s;
 }
+
 .header-section .nav .nav-list li a:hover {
   color: white;
   background-color: black;
   border-radius: 10px;
 }
+
 @media screen and (max-width: 551px) {
   .header-section {
     margin: 10px 0 0;
   }
+
   .header-section .title {
     font-size: 1.6rem;
   }
@@ -403,125 +509,157 @@ a {
   padding: 100px 0;
   box-sizing: border-box;
 }
+
 .banner-section .profile-wrapper .profile-img {
   width: 300px;
   border-radius: 100%;
 }
+
 .banner-section .content-wrapper .heading {
   font-size: 6rem;
   letter-spacing: 1.5px;
 }
+
 @media screen and (max-width: 991px) {
   .banner-section {
     padding: 80px 0;
   }
+
   .banner-section .profile-wrapper .profile-img {
     width: 250px;
   }
+
   .banner-section .content-wrapper .heading {
     font-size: 5rem;
   }
 }
+
 @media screen and (max-width: 767px) {
   .banner-section {
     padding: 50px 0;
   }
+
   .banner-section .profile-wrapper .profile-img {
     width: 200px;
   }
+
   .banner-section .content-wrapper .heading {
     font-size: 4rem;
     letter-spacing: 1px;
   }
 }
+
 @media screen and (max-width: 551px) {
   .banner-section {
     margin: 80px 0;
   }
+
   .banner-section .container {
     flex-direction: column;
   }
+
   .banner-section .content-wrapper {
     margin: 50px 0 0 0;
     align-items: center;
   }
 }
+
 /* *************** banner-section styles ends here *************** */
 /* *************** about-me-section styles starts here *************** */
 .about-me-section .about-me-img {
   width: 350px;
   margin: 0 20px 0 0;
 }
+
 .about-me-section .greetings {
   font-size: 3.6rem;
 }
+
 .about-me-section .title {
   font-size: 3.6rem;
   line-height: 1.5;
 }
+
 .about-me-section .description {
   margin: 10px 0 0 0;
   font-size: 2.4rem;
   line-height: 1.3;
   max-width: 600px;
 }
+
 @media screen and (max-width: 991px) {
   .about-me-section .about-me-img {
     width: 300px;
     margin: 0 15px 0 0;
   }
+
   .about-me-section .greetings {
     font-size: 3rem;
   }
+
   .about-me-section .title {
     font-size: 3rem;
   }
+
   .about-me-section .description {
     font-size: 2rem;
   }
 }
+
 @media screen and (max-width: 767px) {
   .about-me-section .card {
     flex-direction: column;
   }
+
   .about-me-section .about-me-img {
     width: 250px;
   }
+
   .about-me-section .content-wrapper {
     margin: 30px 0 0 0;
   }
+
   .about-me-section .greetings {
     font-size: 2.4rem;
   }
+
   .about-me-section .title {
     font-size: 2.4rem;
   }
+
   .about-me-section .description {
     font-size: 1.6rem;
   }
 }
+
 @media screen and (max-width: 551px) {
   .about-me-section .about-me-img {
     width: 200px;
   }
+
   .about-me-section .content-wrapper {
     margin: 20px 0;
   }
+
   .about-me-section .greetings {
     font-size: 2rem;
   }
+
   .about-me-section .title {
     font-size: 2rem;
   }
+
   .about-me-section .description {
     font-size: 1.4rem;
   }
 }
+
 /* *************** about-me-section styles ends here *************** */
 /* *************** skills-section styles starts here *************** */
 .skills-section .card {
   padding: 40px 30px 30px;
 }
+
 .skills-section .skill {
   display: flex;
   justify-content: center;
@@ -534,15 +672,26 @@ a {
   color: rgb(226, 226, 225);
   font-family: Nunito;
   font-size: 2.4rem;
+  transition: 0.25s;
 }
+
 .skills-section .skill:nth-child(odd) {
   background-color: #34b1fa0c;
 }
+
+.skills-section .skill:hover {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #0f1626;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 /* *************** skills-section styles ends here *************** */
 /* *************** projects-section styles starts here *************** */
 .projects-section .card {
   width: calc(100% - 40px);
 }
+
 .projects-section .arrow {
   position: absolute;
   top: 180px;
@@ -554,25 +703,32 @@ a {
   transition: 0.3s;
   z-index: 9;
 }
+
 .projects-section .projects-next {
   right: 35px;
 }
+
 .projects-section .projects-prev {
   left: 35px;
 }
+
 .projects-section .arrow:hover {
   background-color: #34b1fa;
 }
+
 .projects-section .arrow:hover img {
   filter: brightness(0%);
 }
+
 .projects-section .projects-wrapper {
   overflow-x: auto;
 }
+
 .projects-section .project-box-wrapper {
   width: 300px;
   margin: 15px;
 }
+
 .projects-section .project-box {
   display: flex;
   flex-direction: column;
@@ -586,22 +742,31 @@ a {
   background-color: #34b1fa0c;
   border: 1px solid rgb(226, 226, 225);
   padding: 20px 15px;
+  transition: 0.25s;
 }
+.projects-section .project-box:hover{
+  transform: scale(1.05);
+  background-color: #0f1626;
+}
+
 .projects-section .project-box .title {
   font-family: Nunito-Bold;
   font-size: 3rem;
   color: rgb(226, 226, 225);
 }
+
 .projects-section .project-box .tech-stack {
   font-family: Nunito;
   font-size: 2rem;
   color: rgba(226, 226, 225, 0.9);
 }
+
 .projects-section .project-box .description {
   font-family: Nunito;
   font-size: 1.5rem;
   color: rgba(226, 226, 225, 0.9);
 }
+
 .projects-section .project-box .link {
   display: flex;
   justify-content: center;
@@ -613,20 +778,25 @@ a {
   transition: 0.3s;
   text-decoration: none;
 }
+
 .projects-section .project-box .link:hover {
   background-color: #34b1fa;
   border-color: #34b1fa;
 }
+
 .projects-section .project-box .link img {
   width: 30px;
 }
+
 .projects-section .project-box .link:hover img {
   filter: brightness(0%);
   transition: 0.3s;
 }
+
 .projects-section .project-box .link span {
   display: none;
 }
+
 .projects-section .project-box .link:hover span {
   display: block;
   font-size: 2rem;
@@ -634,6 +804,7 @@ a {
   color: black;
   transition: 0.3s;
 }
+
 @media screen and (max-width: 551px) {
   .projects-section .card {
     width: calc(100% - 10px);
@@ -647,10 +818,12 @@ a {
   max-width: 600px;
   margin: 10px 0 30px 0;
 }
+
 .contact-section .contact-list {
   margin: 0 auto;
   width: fit-content;
 }
+
 .contact-section .contact-list .contact-item {
   margin: 5px 0;
   display: flex;
@@ -661,24 +834,30 @@ a {
   text-decoration: none;
   width: fit-content;
 }
+
 .contact-section .contact-list .contact-item:hover {
   filter: opacity(0.8);
 }
+
 .contact-section .contact-list .contact-item .icon {
   height: 3rem;
   margin: 0 15px 0 0;
 }
+
 @media screen and (max-width: 551px) {
   .contact-section .description {
     font-size: 1.4rem;
   }
+
   .contact-section .contact-list .contact-item {
     font-size: 1.6rem;
   }
+
   .contact-section .contact-list .contact-item .icon {
     height: 2rem;
   }
 }
+
 /* *************** contact-section styles ends here *************** */
 /* *************** scroll styles starts here *************** */
 .scroll-wrapper {
@@ -689,11 +868,13 @@ a {
   left: 15px;
   z-index: 9;
 }
+
 .scroll-wrapper .scroll-list {
   list-style: none;
   flex-direction: column;
   padding: 0;
 }
+
 .scroll-wrapper .scroll-dot {
   cursor: pointer;
   width: 6px;
@@ -704,17 +885,21 @@ a {
   padding: 0;
   margin: 0 auto 12px;
 }
+
 .scroll-wrapper .scroll-dot:hover {
   transform: scale(1.8);
   background: white;
 }
+
 .scroll-wrapper .is-active {
   transform: scale(1.8);
   background: white;
 }
+
 @media screen and (max-width: 767px) {
   .scroll-wrapper {
     display: none;
   }
 }
+
 /* *************** scroll styles ends here *************** */
