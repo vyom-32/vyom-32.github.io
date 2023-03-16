@@ -134,6 +134,7 @@ video {
 
 body {
   line-height: 1;
+  position: relative;
 }
 
 article,
@@ -328,20 +329,6 @@ a {
   perspective: 1.4em;
 }
 
-.section-heading::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 25px;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  filter: blur(15px);
-  transform: translateY(120%) rotateX(95deg) scale(1.2, 0.45);
-  background: var(--glow-color);
-  pointer-events: none;
-}
 
 .card {
   background-color: #0d0d0dab;
@@ -350,6 +337,26 @@ a {
   overflow: auto;
   max-width: inherit;
   position: relative;
+}
+.card:hover{
+  background-color: #0d0d0dc3;
+}
+
+@media screen and (min-width: 767px) {
+  .section-heading::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 25px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    filter: blur(15px);
+    transform: translateY(120%) rotateX(95deg) scale(1.2, 0.45);
+    background: var(--glow-color);
+    pointer-events: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -384,9 +391,149 @@ a {
 
 /* *************** Common styles ends here *************** */
 
+/* *************** background-section styles starts here *************** */
+.bg-icons-wraper{
+  z-index: -1;
+  position: fixed;
+  height: 86%;
+  width: 90%;
+  top: 7%;
+  left: 5%;
+  /* border: 2px solid red; */
+}
+.bg-icons-container{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* border: 2px solid white; */
+}
+.bg-icons{
+  position: absolute;
+  opacity: 0.5;
+  /* animation-name: updown; */
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.bg-icons.scrolledup{
+  animation-name: downup;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+.bg-icons.scrolleddown{
+  animation-name: updown;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+@keyframes updown {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px) scale(0.8); 
+  }
+  100% { transform: translateY(0); }
+}
+@keyframes downup {
+  0% { transform: translateY(0) ; }
+  50% { transform: translateY(30px) scale(0.8); 
+  }
+  100% { transform: translateY(0) ; }
+}
+@keyframes rotate-clock {
+  0% { transform: rotate(0deg) ; }
+  50% { transform: rotate(180deg) ; 
+  }
+  100% { transform: rotate(360deg) ; }
+}
+@keyframes rotate-anti {
+  0% { transform: rotate(0deg) ; }
+  50% { transform: rotate(-180deg) ; 
+  }
+  100% { transform: rotate(-360deg) ; }
+}
+@keyframes remove-rotation {
+  0% {
+    transform: rotate();
+  }
+  100% { transform: rotate(0deg) ; }
+}
+.bg-icons.icon1{
+  top: 7%;
+  left: 5%;
+  width: 150px;
+}
+.bg-icons.icon2{
+  top: 10%;
+  right: 5%;
+  width: 200px;
+  opacity: 0.3;
+}
+.bg-icons.icon3{
+  bottom: 20%;
+  right: 30%;
+  width: 100px;
+  opacity: 0.3;
+}
+.bg-icons.icon4{
+  top: 20%;
+  right: 45%;
+  width: 100px;
+  opacity: 0.3;
+}
+.bg-icons.icon5{
+  bottom: 5%;
+  left: 7%;
+  width: 100px;
+  opacity: 0.3;
+}
+.bg-icons.icon6{
+  bottom: 5%;
+  right: 7%;
+  width: 100px;
+  opacity: 0.3;
+}
+@media screen and (max-width: 551px) {
+  .bg-icons.icon1{
+    top: 7%;
+    left: 5%;
+    width: 100px;
+  }
+  .bg-icons.icon2{
+    top: 17%;
+    right: 5%;
+    width: 150px;
+    opacity: 0.3;
+  }
+  .bg-icons.icon3{
+    bottom: 30%;
+    right: 5%;
+    width: 70px;
+    opacity: 0.3;
+  }
+  .bg-icons.icon4{
+    top: 50%;
+    left: 5%;
+    width: 70px;
+    opacity: 0.3;
+  }
+  .bg-icons.icon5{
+    bottom: 5%;
+    left: 7%;
+    width: 70px;
+    opacity: 0.3;
+  }
+  .bg-icons.icon6{
+    bottom: 0%;
+    right: 7%;
+    width: 50px;
+    opacity: 0.3;
+  }
+}
+/* *************** background-section styles ends here *************** */
+
 /* *************** header-section styles starts here *************** */
 .header-section {
-  margin: 20px 0 0;
+  padding: 20px 0 0;
 }
 
 .header-section .title {
@@ -394,21 +541,6 @@ a {
   text-decoration: none;
   perspective: 2.4em;
 }
-.header-section .title::before {
-  z-index: -1;
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 30px;
-  left: 0;
-  right: 0;
-  opacity: 1;
-  filter: blur(25px);
-  transform: translateY(120%) rotateX(95deg) scale(1.2, 0.45);
-  background: var(--glow-color);
-  pointer-events: none;
-}
-
 
 .header-section .nav {
   position: fixed;
@@ -492,10 +624,27 @@ a {
   background-color: black;
   border-radius: 10px;
 }
+@media screen and (min-width: 767px) {
+  .header-section .title::before {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    filter: blur(25px);
+    transform: translateY(120%) rotateX(95deg) scale(1.2, 0.45);
+    background: var(--glow-color);
+    pointer-events: none;
+  }
+  
+}
 
 @media screen and (max-width: 551px) {
   .header-section {
-    margin: 10px 0 0;
+    padding: 10px 0 0;
   }
 
   .header-section .title {
@@ -674,13 +823,74 @@ a {
   font-size: 2.4rem;
   transition: 0.25s;
 }
+.skill.python:hover{
+  background-image: url(../img/python.png);
+  background-blend-mode:color-dodge;
+  background-size: 30px auto;
+}
+.skill.MongoDB:hover{
+  background-image: url(../img/mongodb.svg);
+  background-blend-mode:color-dodge;
+  background-size: 60px auto;
+}
+.skill.Angular:hover{
+  background-image: url(../img/angular.svg);
+  background-blend-mode:color-dodge;
+  background-size: 30px auto;
+}
+.skill.Vue:hover{
+  background-image: url(../img/vue.svg);
+  background-blend-mode:color-dodge;
+  background-size: 25px auto;
+}
+.skill.Django:hover{
+  background-image: url(../img/django.svg);
+  background-blend-mode:color-dodge;
+  background-size: 40px auto;
+}
+.skill.javascript:hover{
+  background-image: url(../img/javascript.png);
+  background-blend-mode:color-dodge;
+  background-size: 30px auto;
+}
+.skill.React:hover{
+  background-image: url(../img/react.svg);
+  background-blend-mode:color-dodge;
+  background-size: 30px auto;
+}
+.skill.Node:hover{
+  background-image: url(../img/nodejs.svg );
+  background-blend-mode:color-dodge;
+  background-size: 40px auto;
+}
+.skill.HTML:hover{
+  background-image: url(../img/html.svg );
+  background-blend-mode:color-dodge;
+  background-size: 30px auto;
+}
+.skill.MySQL:hover{
+  background-image: url(../img/mysql.svg );
+  background-blend-mode:color-dodge;
+  background-size: 40px auto;
+}
+.skill.CSS:hover{
+  background-image: url(../img/css.svg );
+  background-blend-mode:color-dodge;
+  background-size: 30px auto;
+}
+.skill.ExpressJs:hover{
+  background-image: url(../img/express.svg );
+  background-blend-mode:color-dodge;
+  background-size: 60px auto;
+}
 
 .skills-section .skill:nth-child(odd) {
   background-color: #34b1fa0c;
 }
 
 .skills-section .skill:hover {
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.609);
+  opacity: 1;
   color: #0f1626;
   font-weight: bold;
   cursor: pointer;
