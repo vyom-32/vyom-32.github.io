@@ -3,8 +3,15 @@
   color: black;
 }
 .resume .left-part{
-  width: 30%;
+  width: 35%;
+  background-color: gainsboro;
+  padding-bottom: 240px;
 }
+.resume .right-part{
+  width: 65%;
+  padding: 35px 20px 25px;
+}
+
 .resume .left-part .title{
   text-transform: uppercase;
   font-size: 30px;
@@ -12,7 +19,7 @@
 }
 .resume .left-part .position{
   font-size: 20px;
-  padding: 5px 0 7px;
+  padding: 15px 0 15px;
 }
 .resume .left-part .portfolio-link{
   font-size: 14px;
@@ -22,7 +29,7 @@
 .left-part .profile{
   background-color: rgb(32, 31, 31);
   color: white;
-  padding: 35px 20px 25px;
+  padding: 45px 20px 40px;
 }
 .left-part .profile .contact-list {
   padding-top: 20px;
@@ -30,7 +37,7 @@
 .left-part .profile .contact-list .icon{
   height: 20px;
   margin-right: 5px;
-  margin-top: 7px;
+  margin-top: 10px;
 }
 .left-part .profile .contact-list .icon.linkedin{
   height: 15px;
@@ -44,7 +51,7 @@
 .left-part .side-bottom{
   background-color: gainsboro;
   /* color: white; */
-  padding: 35px 20px 25px;
+  padding: 45px 20px 25px;
 }
 .left-part .side-bottom .text{
   font-size: 16px;
@@ -58,12 +65,12 @@
   font-size: 16px;
   color:rgb(31, 31, 31);
   font-weight: 500;
-}
-.resume .right-part{
-  width: 70%;
-  padding: 35px 20px 25px;
+  margin-top: 5px;
 }
 .resume .right-part .para{
   font-size: 16px;
   padding-top: 10px;
+}
+.resume .right-part .para li{
+  margin-top: 10px;
 }
