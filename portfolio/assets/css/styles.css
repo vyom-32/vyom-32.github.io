@@ -884,6 +884,12 @@ a {
   background-size: 60px auto;
 }
 
+.skill.NestJs:hover{
+  background-image: url(../img/nest.svg );
+  background-blend-mode:color-dodge;
+  background-size: 60px auto;
+}
+
 .skills-section .skill:nth-child(odd) {
   background-color: #34b1fa0c;
 }
